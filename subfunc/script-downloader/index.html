@@ -1,0 +1,77 @@
+<html>
+<body>
+
+<div id='result' style="text-align: center;"> 
+	<a href='https://tiktok.com/@nvmbrxi' target='_blank'>@nvmbrxi</a> Script Getter
+	<br/><br/>
+	<input type='text' id='link' placeholder='https://vt.tiktok.com/ZSJHwr7eb/' size=30/>
+	<br/>
+	<input type='button' value='GET LINK' id='button' onclick='getLink()'/>
+	<br/>
+	<br/>
+	<div id='linkList'></div>
+</div>
+
+</body>
+<script type="text/javascript" src="script-list/list.js"></script>
+<script>
+
+function getLink(){
+	var inputUrl = document.getElementById('link').value;
+	
+	var shortPatt = new RegExp(".+(vt.tiktok.com).+");
+	var longPatt = new RegExp(".+(tiktok.com\/@nvmbrxi\/video).+");
+	
+	if (shortPatt.test(inputUrl)){
+		var corsProxy = 'https://api.allorigins.win/get?url=';
+		var expandUrl = corsProxy+'http://expandurl.com/api/v1/?url='+inputUrl;
+		var apiResponse = '';
+		var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				apiResponse = JSON.parse(this.responseText);
+				var longUrl = apiResponse.contents;
+				longUrl = longUrl.replace('https://','');
+				var videoId = longUrl.split('/', 5)[4];
+				listFile(videoId);
+			}
+		  };
+		  xhttp.open("GET", expandUrl, true);
+		  xhttp.send();
+	} else
+	if (longPatt.test(inputUrl)){
+		longUrl = inputUrl.replace('https://','');
+		longUrl = longUrl.split('/', 4)[3];
+		var videoId = longUrl.substring(0, longUrl.indexOf('?'));
+		listFile(videoId);
+	} else {
+		listFile();
+	}
+}
+
+function listFile(videoId = null){
+	var result = document.getElementById('linkList');
+	result.innerHTML = '';
+	if (videoId){
+		var json = JSON.parse(list);
+		var link = json[videoId]['link'];
+		link.forEach(e => {
+			var a = document.createElement('a'); 
+			var href = document.createTextNode(e['label']);
+			a.appendChild(href); 
+			a.href = e['url'];
+			a.target = '_blank';
+			result.appendChild(a); 
+		});
+	} else {
+		var a = document.createElement('a'); 
+		var href = document.createTextNode("Not Found!");
+		a.appendChild(href); 
+		a.href = 'https://tiktok.com/@nvmbrxi';
+		a.target = '_blank';
+		result.appendChild(a);
+	}
+	
+}
+</script>
+</html>
