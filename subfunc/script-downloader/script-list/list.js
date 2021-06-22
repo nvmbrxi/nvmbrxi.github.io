@@ -1,8 +1,81 @@
 var list = `{
+	"6945361350696635650": {
+		"link": [
+			{
+				"label":"1 + 1 + 1 + 1 + 1",
+				"ext":"php"
+			}
+		]
+	},
+	"6945426508580211970": {
+		"link": [
+			{
+				"label":"Krg efisien",
+				"ext":"php"
+			}
+		]
+	},
+	"6945684426269461761": {
+		"link": [
+			{
+				"label":"bener. klo value static knp g pakai array? looping jelas lebih memakan proses",
+				"ext":"php"
+			}
+		]
+	},
+	"6946124368053357825": {
+		"link": [
+			{
+				"label":"PAKE JAVASCRIPT",
+				"ext":"html"
+			}
+		]
+	},
+	"6946886936887856386": {
+		"link": [
+			{
+				"label":"Andai kerjaan sehari-hari semudah ini :(",
+				"ext":"php"
+			}
+		]
+	},
+	"6953535533259689217": {
+		"link": [
+			{
+				"label":"bang, bantu bikin program php untuk body mass index bang, saya bingung",
+				"ext":"php"
+			}
+		]
+	},
+	"6955203516088503553": {
+		"link": [
+			{
+				"label":"Pop up dialog interaktif dengan microsoft excel",
+				"ext":"vb"
+			}
+		]
+	},
+	"6956968454574443777": {
+		"link": [
+			{
+				"label":"Pop up dialog interaktif di android",
+				"ext":"html"
+			}
+		]
+	},
+	"6964458151307513089": {
+		"link": [
+			{
+				"label":"Kalkulator BMI dengan form",
+				"ext":"php"
+			}
+		]
+	},
 	"6971387072364023042": {
 		"link": [
 			{
 				"label":"BIKIN WEB, TOMBOLNYA KABUR",
+				"ext":"html",
 				"url":"https://raw.githubusercontent.com/nvmbrxi/nvmbrxi.github.io/nvmbrxi/subfunc/script-downloader/script-list/6971387072364023042.html"
 			}
 		]
