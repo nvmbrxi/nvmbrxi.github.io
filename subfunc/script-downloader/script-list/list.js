@@ -74,9 +74,18 @@ var list = `{
 	"6971387072364023042": {
 		"link": [
 			{
-				"label":"BIKIN WEB, TOMBOLNYA KABUR",
+				"label":"BIKIN WEB, TOMBOLNYA KABUR.",
 				"ext":"html",
 				"url":"https://raw.githubusercontent.com/nvmbrxi/nvmbrxi.github.io/nvmbrxi/subfunc/script-downloader/script-list/6971387072364023042.html"
+			}
+		]
+	},
+	"6981861132596202754": {
+		"link": [
+			{
+				"label":"CARA NAMBAHIN BGM DI HTML.",
+				"ext":"html",
+				"url":"https://raw.githubusercontent.com/nvmbrxi/nvmbrxi.github.io/nvmbrxi/subfunc/script-downloader/script-list/6981861132596202754.html"
 			}
 		]
 	}
