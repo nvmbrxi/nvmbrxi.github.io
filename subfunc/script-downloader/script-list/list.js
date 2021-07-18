@@ -67,7 +67,7 @@ var list = `{
 		"link": [
 			{
 				"label":"Kalkulator BMI dengan form",
-				"ext":"php"
+				"ext":"html"
 			}
 		]
 	},
