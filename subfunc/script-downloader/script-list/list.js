@@ -88,5 +88,14 @@ var list = `{
 				"url":"https://raw.githubusercontent.com/nvmbrxi/nvmbrxi.github.io/nvmbrxi/subfunc/script-downloader/script-list/6981861132596202754.html"
 			}
 		]
+	},
+	"6989984396770118939": {
+		"link": [
+			{
+				"label":"CONTOH BOOTSTRAP",
+				"ext":"html",
+				"url":"https://raw.githubusercontent.com/nvmbrxi/nvmbrxi.github.io/nvmbrxi/subfunc/script-downloader/script-list/6989984396770118939.html"
+			}
+		]
 	}
 }`;
