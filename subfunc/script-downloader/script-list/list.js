@@ -97,5 +97,14 @@ var list = `{
 				"url":"https://raw.githubusercontent.com/nvmbrxi/nvmbrxi.github.io/nvmbrxi/subfunc/script-downloader/script-list/6989984396770118939.html"
 			}
 		]
+	},
+	"6991513676498881818": {
+		"link": [
+			{
+				"label":"Cara bikin alert bagus. Sweetalert!",
+				"ext":"html",
+				"url":"https://raw.githubusercontent.com/nvmbrxi/nvmbrxi.github.io/nvmbrxi/subfunc/script-downloader/script-list/6991513676498881818.html"
+			}
+		]
 	}
 }`;
