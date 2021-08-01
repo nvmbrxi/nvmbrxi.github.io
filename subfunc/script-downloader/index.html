@@ -41,9 +41,8 @@ function getLink(){
 		  xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				apiResponse = JSON.parse(this.responseText);
-				var longUrl = apiResponse.contents;
-				longUrl = longUrl.replace('https://','');
-				var videoId = longUrl.split('/', 5)[4];
+				var videoId = handleLongUrl(apiResponse.contents);
+				console.log(videoId);
 				listFile(videoId);
 			}
 		  };
@@ -51,13 +50,18 @@ function getLink(){
 		  xhttp.send();
 	} else
 	if (longPatt.test(inputUrl)){
-		longUrl = inputUrl.replace('https://','');
-		longUrl = longUrl.split('/', 4)[3];
-		var videoId = longUrl.substring(0, longUrl.indexOf('?'));
+		var videoId = handleLongUrl(inputUrl);
 		listFile(videoId);
 	} else {
 		listFile();
 	}
+}
+
+function handleLongUrl(rawUrl){
+	var longUrl = rawUrl.replace('https://','');
+	var splitUrl = longUrl.split('/', 4)[3];
+	var videoId = splitUrl.substring(0, splitUrl.indexOf('?'));
+	return videoId;
 }
 
 function listFile(videoId = null){
@@ -75,6 +79,7 @@ function listFile(videoId = null){
 			test.href = testUrl+fileName;
 			download.href = downloadUrl+fileName;
 			document.getElementById("results").style.display = "block";
+			download.style.display = 'inline';
 			if(e['ext'] == 'html'){
 				test.style.display = "inline";
 			}
